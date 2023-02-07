@@ -29,11 +29,11 @@ const albomJSON = `[
       }
 ]`;
 
-function retderPhoto(albom){
+function retderPhoto(albom ){
   let users = '';
   for(const user of albom){
     users += `
-    <article >
+    <article>
     <img src="${user.url}" alt="${user.id}">
     <h3>${user.title} </h3>
     <img src="${user.thumbnailUrl}" alt="${user.id}">
@@ -42,4 +42,4 @@ function retderPhoto(albom){
   }
   document.querySelector('.alboms').innerHTML = users
 }
-retderPhoto(JSON.parse(albomJSON))
+retderPhoto(JSON.parse(albomJSON));
